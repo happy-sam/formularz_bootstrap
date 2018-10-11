@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    
+    <section class="container container-form">    
+    <form name="formularz" method="get" action="http://codingplatform.pl/message.php">
+        <h1>FORMULARZ REKLAMACJI</h1>
+        <div class="form-row">
+            <div class="form-group col-7">
+                <label for="name">Imię i nazwisko:</label>
+                <input type="text" name="Imie_i_nazwisko" value="" placeholder="wpisz swoje imię lub pseudonim" id="name" class="form-control">            
+            </div>    
+            <div class="form-group col-5">
+                <label for="date-buy">Data zakupu:</label>
+                <input type="date" name="Data_zakupu" value="" id="date-buy" class="form-control">
+            </div>
+        </div>
+                        
+        <div class="form-row">
+            <div class="form-group col-8">
+                <label for="adress-email">Twój adres e-mail:</label>
+                <input type="email" name="email" value="" placeholder="e-mail" id="adress-email" aria-describedby="description-email" class="form-control"  required>
+                <small id="description-email" class="form-text text-muted">Na podany adres otrzymasz potwierdzenie wysłania reklamacji</small>
+            </div>            
+            <div class="form-group col-4">
+                <label for="number-phone">Twój nr telefonu:</label>
+                <input type="number" name="Numer_telefonu" value="" placeholder="numer telefonu" id="number-phone" class="form-control" required>
+            </div>            
+        </div>
+        
+        <div class="form-row">                
+            <div class="form-group col-6">
+                <p>Czy posiadasz:</p>
+                <div class="form-check form-check-inline">                
+                    <input type="checkbox" name="Dokument_faktura" value="" id="add-button1" class="form-check-input">            
+                    <label class="form-check-label" for="add-button1">fakturę</label>
+                </div>
+                <div class="form-check form-check-inline">                
+                    <input type="checkbox" name="Dokument_gwarancja" value="" id="add-button2" class="form-check-input" checked>           
+                    <label class="form-check-label" for="add-button2">kartę gwarancyjną</label>
+                </div>
+            </div>        
+
+            <div class="form-group col-6">
+                <p>W ramach reklamacji oczekuję:</p>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="Oczekiwania" value="Naprawa" id="radio-small" checked>            
+                    <label class="form-check-label" for="radio-small">Naprawa</label> 
+                </div>
+                <div class="form-check form-check-inline">                        
+                    <input  class="form-check-input"  type="radio" name="Oczekiwania" value="Wymiana" id="radio-medium">                        
+                    <label class="form-check-label" for="radio-medium">Wymiana</label>
+                </div>
+                <div class="form-check form-check-inline">                        
+                    <input  class="form-check-input"  type="radio" name="Oczekiwania" value="Zwrot gotówki" id="radio-large">                        
+                    <label class="form-check-label" for="radio-large">Zwrotu gotówki</label>
+                </div>            
+            </div>
+        </div>
+        
+        
+        <div class="form-group">
+           <label class="form-check-label" for="your-message">Wiadomość</label>
+            <textarea type="text" class="form-control" id="your-message" placeholder="wpisz wiadomość dla nas"></textarea>
+        </div>
+        <button type="submit" class="btn btn-info" id="btn-send">WYŚLIJ</button>
+        <button type="reset" class="btn btn-dark">Wyczyść formularz</button>
+        
+    </form>    
+    </section>
+    
+    <div id="message" class="container">
+        <span class="message">Twoja wiadomosć została wysłana</span>
+    </div>
+    
+    
+    
+    
+    
+    
+    
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+</body>
+</html>
+
+
+
+
+<!--
+Prepare form that will send data with method GET to address http://codingplatform.pl/message.php
+
+The form should have:
+
+Input text with name title
+Input email with name email
+Input date that will allow to choose date of birthday
+2 checkboxes with example agreement in labels
+3 radio buttons with name age and values small, medium, high
+textarea with name message that will allow to send additional comment from user
+button submit and button reset
+Additional css styles should be added to the form so the look would be appropriate.-->
